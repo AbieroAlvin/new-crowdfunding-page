@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-body;
+}
+
+/* :root {
+  --Moderatecyan: hsl(176, 50%, 47%);
+  --Darkcyan: hsl(176, 72%, 28%);
+  --Black: hsl(0, 0%, 0%);
+  --Darkgray: hsl(0, 0%, 48%);
+} */
+
+@layer base {
+  #mahogany-card {
+    @apply opacity-50;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
+  }
+
+  p {
+    @apply text-Darkgray;
+  }
+
+  /* Modal Styles */
+  .selected {
+    @apply border-[1.8px] border-Moderatecyan rounded-lg;
+  }
+
+  .not-selected {
+    @apply border border-gray-400 rounded-lg;
+  }
+
+  .not-selected:hover h3 {
+    @apply text-Moderatecyan cursor-pointer;
+  }
+
+  /* Inputs */
+
+  .custom-radio {
+    @apply flex h-5 w-5 items-center justify-center rounded-full border border-gray-300 cursor-pointer;
+  }
+
+  .checkmark {
+    display: none;
+    width: calc(100% - 11.5px);
+    height: calc(100% - 11.5px);
+    @apply rounded-full bg-Moderatecyan;
+  }
+
+  .custom-radio input:checked + .checkmark {
+    display: inline-block;
+  }
+  .dollar::before {
+    content: "$";
+    position: absolute;
+    top: -3px;
+    left: 1rem;
+    @apply text-Darkgray;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
