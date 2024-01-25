@@ -1,4 +1,4 @@
-import { AppContextProvider } from "./Contexts/AppContext";
+import { AppContextProvider } from "./contexts/AppContext";
 import Home from "./Home";
 
 function App() {
